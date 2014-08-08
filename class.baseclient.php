@@ -410,9 +410,9 @@ class HubSpot_BaseClient
             {
                 if ( is_array($value) )
                 {
-                    foreach ( $value as $subparam )
+                    foreach ( $value as $subparam => $subvalue )
                     {
-                        $paramstring = $paramstring . '&' . $parameter . '=' . urlencode($subparam);
+                        $paramstring = $paramstring . '&' . $subparam . '=' . urlencode($subvalue);
                     }
                 }
                 else
